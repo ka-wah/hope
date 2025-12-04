@@ -98,6 +98,14 @@ data:
       - d_log1p_SPOT_transactions_count_outflow
       # - d_log_SPOT_stablecoins_ratio_usd
       - d_logit_SPOT_exchange_whale_ratio
+    	- log1p_der_inflow_total
+  	  - d_log1p_der_inflow_total,
+    	- log1p_der_outflow_total
+    	- d_log1p_der_outflow_total
+    	- log1p_der_transactions_count_inflow
+    	- d_log1p_der_transactions_count_inflow
+    	- log1p_der_transactions_count_outflow
+    	- d_log1p_der_transactions_count_outflow
     T:
       - z_gt
       - rtrs_pos_z
@@ -200,7 +208,7 @@ models:
 
 tuning:
   strategy: random
-  n_iter: 128
+  n_iter: 2
   keep_top_k: 2
   seed: 0
   build_family_ensemble: true
@@ -465,4 +473,5 @@ portfolio:
 logging:
   level: INFO
   show_progress: true
+
 
