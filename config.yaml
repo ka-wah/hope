@@ -3,7 +3,7 @@ experiment:
   seed: 0
 
 paths:
-  data: outputs/features_and_dh_returns.parquet
+  data: features_and_dh_returns.parquet
 
 data:
   date_col: date
@@ -465,3 +465,4 @@ portfolio:
 logging:
   level: INFO
   show_progress: true
+
