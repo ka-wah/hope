@@ -88,9 +88,8 @@ INTERACTION_PARENTS = {
 # _validate_groups(GROUP_LADDER, set(GROUPS))
 
 RUNS = [
-    RunSpec(base_config_path="./hehe/config big.yaml", target="y_price",
-            data_path=r"C:\Users\kawah\Documents\bitcoining\hehe\features_and_dh_returns.parquet",
-            groups=GROUPS, contracts_type="all", contracts_mny="all",),
+    RunSpec(base_config_path="./config.yaml", target="y_price",
+            groups=["I", "B", "M", "C", "INTERACTIONS"], contracts_type="all", contracts_mny="all",),
     # RunSpec(base_config_path="./config.yaml", target="y_price",
     #         data_path=r"C:\Users\kawah\Documents\bitcoining\cleaned_input\spec2_nom1_mny1_w10.csv",
     #         groups=GROUPS, contracts_type="call", contracts_mny="all",),
@@ -3054,3 +3053,4 @@ if __name__ == "__main__":
             run_from_spec(spec)
     else:
         LOG.warning("No RUNS configured. Edit RUNS at the top of the file.")
+
